@@ -1,0 +1,162 @@
+.testimonialsContainer {
+  padding: 80px 20px;
+  background-color: #fff;
+  position: relative;
+  scroll-margin-top: 12vh;
+}
+
+.testimonialsHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonialsHeader h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.testimonialsHeader h2 span {
+  font-family: "Great Vibes", cursive;
+  font-weight: 700;
+  color: #c59d9d;
+}
+
+.testimonialsHeader::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #e0c4a0;
+  margin: 15px auto 0;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carouselInner {
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonialSlide {
+  flex: 0 0 33.333%;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.testimonialCard {
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border: 1px solid #f0f0f0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-style: italic;
+  flex-grow: 1;
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c59d9d;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.arrow:hover {
+  background-color: #c59d9d;
+  color: #fff;
+  border-color: #c59d9d;
+}
+
+.left {
+  left: -20px;
+}
+
+.right {
+  right: -20px;
+}
+
+@media (max-width: 1250px) {
+    .left {
+        left: 10px;
+    }
+    .right {
+        right: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+  .testimonialSlide {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonialSlide {
+    flex-basis: 100%;
+    padding: 0 5px;
+  }
+  .testimonialsHeader h2 {
+    font-size: 2.2rem;
+  }
+  .arrow {
+    top: auto;
+    bottom: -70px;
+  }
+  .left {
+    left: 50%;
+    transform: translateX(-120%);
+  }
+  .right {
+    right: 50%;
+    transform: translateX(120%);
+  }
+  .testimonialsContainer {
+    scroll-margin-top: 10vh;
+    padding-bottom: 120px;
+  }
+}

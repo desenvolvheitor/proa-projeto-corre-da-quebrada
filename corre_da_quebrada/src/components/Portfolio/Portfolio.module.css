@@ -1,0 +1,92 @@
+.portfolio_container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  scroll-margin-top: 12vh;
+}
+
+.portfolio_header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portfolio_header h2 {
+  font-size: 2.8rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.portfolio_header h2 span {
+  font-family: "Great Vibes", cursive;
+  font-weight: 700;
+  color: #c59d9d;
+}
+
+.portfolio_header h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #c59d9d;
+  margin: 8px auto 0;
+}
+
+.portfolio_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  transition: all 0.5s ease-in-out;
+}
+
+.image_wrapper {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image_wrapper img:hover {
+  transform: scale(1.05);
+}
+
+.button_container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.portfolio_button {
+    background-color: #e0b458;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio_button:hover {
+    background-color: #d4a24e;
+}
+
+@media (max-width: 768px) {
+  .portfolio_container {
+    scroll-margin-top: 10vh;
+  }
+  
+  .portfolio_header h2 {
+    font-size: 2.2rem;
+  }
+}
